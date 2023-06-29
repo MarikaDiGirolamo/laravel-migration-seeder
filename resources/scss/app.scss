@@ -5,6 +5,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
 }
 
 img {
@@ -12,7 +14,7 @@ img {
 }
 
 body {
-    background-color: #222;
+    background-color: #cb3234;
     color: white;
 }
 
@@ -21,8 +23,29 @@ footer {
     width: 100%;
     background: #EEE;
     color: black;
+    i{
+        color: red;
+        margin: 0.3rem;
+    }
+    i:hover{
+        cursor: pointer;
+        transform: scale(1.4);
+        transition: 0.2s;
+        text-shadow: 6px 3px 2px rgba(206,89,55,0.66);
+    }
 }
+
+
 
 header img.logo {
     height: 2rem;
 }
+
+    .f-container{
+        width: 100%;
+        height: 80px;
+        color: red;
+        text-align: center;
+        font-size: 1.3rem;
+        padding: 0 1.5rem; 
+    }

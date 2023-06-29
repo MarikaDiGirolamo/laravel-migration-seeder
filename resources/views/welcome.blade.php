@@ -9,7 +9,7 @@
                     <table class="table table-bordered">
                         <thead>
                             <tr>
-                                <th scope="col">#id</th>
+                                <th scope="col">#</th>
                                 <th scope="col">Company</th>
                                 <th scope="col">Departure</th>
                                 <th scope="col">Arrival</th>
@@ -32,17 +32,31 @@
                                     <td>{{ $train->arrival_time }}</td>
                                     <td>{{ $train->train_code }}</td>
                                     <td>{{ $train->train_carriages }}</td>
-                                    <td>{{ $train->on_time }}</td>
-                                    <td>{{ $train->deleted }}</td>
+                                    {{-- @php
+                                        if ($train->on_time == 1) {
+                                            $train->on_time = 'YES';
+                                        } else {
+                                            $train->on_time = 'NO';
+                                        }
+                                    @endphp --}}
+
+                                    @if ($train->on_time == 1)
+                                        <td>YES</td>
+                                    @else
+                                        <td>NO</td>
+                                    @endif
+
+                                    @if ($train->deleted == 1)
+                                        <td>YES</td>
+                                    @else
+                                        <td>NO</td>
+                                    @endif
                                 </tr>
                             @endforeach
-
                         </tbody>
                     </table>
-
                 </div>
             </div>
         </div>
-
     </div>
 @endsection

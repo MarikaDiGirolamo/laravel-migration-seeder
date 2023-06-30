@@ -14,7 +14,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        // $this->call(TrainsTableSeeder::class); //mi richiama l'altra pagina seeder. se faccio db:seed mi richiama tutto il seeder
+
+        \App\Models\Train::factory(10)->create();
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
